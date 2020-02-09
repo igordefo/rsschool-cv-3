@@ -174,3 +174,49 @@ footer span {
   opacity: 0.5;
   text-align: left;
 }
+
+@media screen and (max-width: 992px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'about'
+      'skills'
+      'experience'
+      'education'
+      'project';
+  }
+
+  .project-list {
+    flex-direction: column;
+  }
+
+  .project-list > * + * {
+    margin-top: 3rem;
+  }
+
+  .project-item a {
+    display: block;
+  }
+
+  .project-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  html {
+    font-size: 42%;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .photo img {
+    margin-top: 2rem;
+    width: 40rem;
+    height: auto;
+  }
+}
